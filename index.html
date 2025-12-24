@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thamina Farzana - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body, .resume-wrapper {
+      height: 100%;
+      width: 100%;
+    }
+
+    .resume-wrapper {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      min-height: 100%;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 56px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: pulse 15s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+    }
+
+    .name {
+      font-size: 42px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 24px;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .email-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 10px 20px;
+      border-radius: 25px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .email-badge svg {
+      width: 16px;
+      height: 16px;
+      fill: white;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .social-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .social-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    .content {
+      padding: 48px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+      border-radius: 2px;
+    }
+
+    .section-title svg {
+      width: 24px;
+      height: 24px;
+      fill: url(#gradient1);
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border: 1px solid #f0f0f0;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .card:hover {
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .summary-card {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+      border: 1px solid rgba(102, 126, 234, 0.2);
+    }
+
+    .summary-text {
+      color: #4a5568;
+      line-height: 1.8;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+
+    .item-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 4px;
+    }
+
+    .item-subtitle {
+      font-size: 15px;
+      color: #718096;
+      font-weight: 500;
+    }
+
+    .item-date {
+      font-size: 14px;
+      color: #a0aec0;
+      font-weight: 500;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .item-description {
+      color: #4a5568;
+      line-height: 1.7;
+      font-size: 14px;
+      margin-left: 20px;
+      margin-top: 12px;
+    }
+
+    .item-description li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .item-description li::marker {
+      color: #667eea;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-category {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(102, 126, 234, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .skill-category:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.15);
+    }
+
+    .skill-category-title {
+      font-size: 14px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      background: #ffffff;
+      color: #4a5568;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      border: 1px solid #e2e8f0;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .skill-tag:hover {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-color: transparent;
+      transform: scale(1.05);
+    }
+
+    .project-highlight {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-top: 12px;
+      border-left: 3px solid #667eea;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .project-highlight-icon {
+      font-size: 18px;
+    }
+
+    .project-highlight-text {
+      color: #5a67d8;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .footer {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 32px 48px;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-email {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .footer-email svg {
+      width: 18px;
+      height: 18px;
+      fill: white;
+    }
+
+    .footer-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .header, .content, .footer {
+        padding: 32px 24px;
+      }
+
+      .name {
+        font-size: 32px;
+      }
+
+      .title {
+        font-size: 16px;
+      }
+
+      .contact-header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .item-header {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 20px;
+      }
+    }
+
+    @media print {
+      .resume-wrapper {
+        background: white;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .card:hover {
+        transform: none;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <svg style="display: none;"><defs>
+    <lineargradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+     <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+     <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </lineargradient>
+   </defs>
+  </svg>
+  <div class="resume-wrapper">
+   <div class="resume-container"><!-- Header -->
+    <header class="header">
+     <h1 class="name" id="name">Thamina Farzana</h1>
+     <p class="title" id="title">Computer Science &amp; Engineering Student | Full-Stack Developer</p>
+     <div class="contact-header">
+      <div class="email-badge">
+       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+       </svg><span id="email">thaminafarzana@gmail.com</span>
+      </div>
+      <div class="social-links"><a href="https://github.com/thamina-farzana" target="_blank" rel="noopener noreferrer" class="social-btn" id="github-link" aria-label="GitHub Profile">
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+        </svg></a> <a href="https://linkedin.com/in/thamina-farzana" target="_blank" rel="noopener noreferrer" class="social-btn" id="linkedin-link" aria-label="LinkedIn Profile">
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        </svg></a>
+      </div>
+     </div>
+    </header><!-- Content -->
+    <main class="content"><!-- Professional Summary -->
+     <section class="section">
+      <h2 class="section-title">
+       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+       </svg> Professional Summary</h2>
+      <div class="card summary-card">
+       <p class="summary-text" id="summary">A motivated Computer Science and Engineering student with a strong interest in building secure, scalable full-stack web applications. Experienced in the MERN stack, Java-based systems, and cloud platforms through academic projects and internships. Passionate about solving real-world problems by designing efficient, user-focused solutions. Continuously learning and improving skills in web development, cloud computing, and modern software technologies.</p>
+      </div>
+     </section><!-- Education -->
+     <section class="section">
+      <h2 class="section-title">
+       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+       </svg> Education</h2>
+      <div class="card">
+       <div class="item-header">
+        <div>
+         <div class="item-title">
+          B.E. Computer Science &amp; Engineering
+         </div>
+         <div class="item-subtitle">
+          St. Joseph's College of Engineering
+         </div>
+        </div>
+        <div class="item-date">
+         2024 – 2028
+        </div>
+       </div>
+      </div>
+     </section><!-- Experience -->
+     <section class="section">
+      <h2 class="section-title">
+       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
+       </svg> Experience</h2>
+      <div class="card">
+       <div class="item-header">
+        <div>
+         <div class="item-title">
+          Web Development Intern
+         </div>
+         <div class="item-subtitle">
+          Trios Technologies Pvt Ltd
+         </div>
+        </div>
+       </div>
+       <ul class="item-description">
+        <li>Worked on modern web application development using contemporary front-end and back-end technologies</li>
+        <li>Assisted in full-stack feature implementation contributing to real-world production systems</li>
+        <li>Collaborated with team members using Git version control and agile development practices</li>
+       </ul>
+      </div>
+     </section><!-- Skills -->
+     <section class="section">
+      <h2 class="section-title">
+       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
+       </svg> Skills</h2>
+      <div class="skills-grid">
+       <div class="skill-category">
+        <div class="skill-category-title">
+         Frontend
+        </div>
+        <div class="skill-tags"><span class="skill-tag">HTML</span> <span class="skill-tag">CSS</span> <span class="skill-tag">JavaScript</span> <span class="skill-tag">React</span>
+        </div>
+       </div>
+       <div class="skill-category">
+        <div class="skill-category-title">
+         Backend
+        </div>
+        <div class="skill-tags"><span class="skill-tag">Java</span> <span class="skill-tag">Node.js</span>
+        </div>
+       </div>
+       <div class="skill-category">
+        <div class="skill-category-title">
+         Databases
+        </div>
+        <div class="skill-tags"><span class="skill-tag">MongoDB</span> <span class="skill-tag">MySQL</span>
+        </div>
+       </div>
+       <div class="skill-category">
+        <div class="skill-category-title">
+         Tools &amp; Cloud
+        </div>
+        <div class="skill-tags"><span class="skill-tag">AWS</span> <span class="skill-tag">Git</span> <span class="skill-tag">Linux</span>
+        </div>
+       </div>
+      </div>
+     </section><!-- Projects -->
+     <section class="section">
+      <h2 class="section-title">
+       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+       </svg> Projects</h2>
+      <div class="card">
+       <div class="item-title">
+        Centralized Patient Communication Hub
+       </div>
+       <ul class="item-description">
+        <li>Designed and developed a secure patient–doctor communication platform focused on data privacy</li>
+        <li>Built using React and TypeScript with emphasis on usability and performance optimization</li>
+        <li>Implemented role-based access control for privacy and secure messaging capabilities</li>
+       </ul>
+       <div class="project-highlight"><span class="project-highlight-icon">🏆</span> <span class="project-highlight-text">Selected as hackathon finalist among 100+ teams</span>
+       </div>
+      </div>
+      <div class="card">
+       <div class="item-title">
+        EcoTrackr
+       </div>
+       <ul class="item-description">
+        <li>Developed a full-stack MERN application to track eco-friendly activities in real time</li>
+        <li>Designed a scalable backend architecture supporting 500+ users with zero downtime</li>
+        <li>Performance-optimized client-server communication ensuring reliable real-time data handling</li>
+       </ul>
+       <div class="project-highlight"><span class="project-highlight-icon">🎯</span> <span class="project-highlight-text">Developed for a coding club contest</span>
+       </div>
+      </div>
+     </section>
+    </main><!-- Footer -->
+    <footer class="footer">
+     <div class="footer-content">
+      <div class="footer-email">
+       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+       </svg><span id="footer-email">thaminafarzana@gmail.com</span>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="social-links"><a href="https://github.com/thamina-farzana" target="_blank" rel="noopener noreferrer" class="social-btn" id="footer-github" aria-label="GitHub Profile">
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+        </svg></a> <a href="https://linkedin.com/in/thamina-farzana" target="_blank" rel="noopener noreferrer" class="social-btn" id="footer-linkedin" aria-label="LinkedIn Profile">
+        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        </svg></a>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      full_name: "Thamina Farzana",
+      job_title: "Computer Science & Engineering Student | Full-Stack Developer",
+      email: "thaminafarzana@gmail.com",
+      github_url: "https://github.com/thamina-farzana",
+      linkedin_url: "https://linkedin.com/in/thamina-farzana",
+      professional_summary: "A motivated Computer Science and Engineering student with a strong interest in building secure, scalable full-stack web applications. Experienced in the MERN stack, Java-based systems, and cloud platforms through academic projects and internships. Passionate about solving real-world problems by designing efficient, user-focused solutions. Continuously learning and improving skills in web development, cloud computing, and modern software technologies.",
+      gradient_start: "#667eea",
+      gradient_end: "#764ba2",
+      card_background: "#ffffff",
+      text_primary: "#2d3748",
+      text_secondary: "#4a5568"
+    };
+
+    async function onConfigChange(config) {
+      const nameEl = document.getElementById('name');
+      const titleEl = document.getElementById('title');
+      const emailEl = document.getElementById('email');
+      const footerEmailEl = document.getElementById('footer-email');
+      const summaryEl = document.getElementById('summary');
+      const githubLink = document.getElementById('github-link');
+      const linkedinLink = document.getElementById('linkedin-link');
+      const footerGithub = document.getElementById('footer-github');
+      const footerLinkedin = document.getElementById('footer-linkedin');
+
+      if (nameEl) nameEl.textContent = config.full_name || defaultConfig.full_name;
+      if (titleEl) titleEl.textContent = config.job_title || defaultConfig.job_title;
+      if (emailEl) emailEl.textContent = config.email || defaultConfig.email;
+      if (footerEmailEl) footerEmailEl.textContent = config.email || defaultConfig.email;
+      if (summaryEl) summaryEl.textContent = config.professional_summary || defaultConfig.professional_summary;
+      if (githubLink) githubLink.href = config.github_url || defaultConfig.github_url;
+      if (linkedinLink) linkedinLink.href = config.linkedin_url || defaultConfig.linkedin_url;
+      if (footerGithub) footerGithub.href = config.github_url || defaultConfig.github_url;
+      if (footerLinkedin) footerLinkedin.href = config.linkedin_url || defaultConfig.linkedin_url;
+
+      const gradientStart = config.gradient_start || defaultConfig.gradient_start;
+      const gradientEnd = config.gradient_end || defaultConfig.gradient_end;
+      const cardBg = config.card_background || defaultConfig.card_background;
+      const textPrimary = config.text_primary || defaultConfig.text_primary;
+      const textSecondary = config.text_secondary || defaultConfig.text_secondary;
+
+      const gradient = `linear-gradient(135deg, ${gradientStart} 0%, ${gradientEnd} 100%)`;
+      
+      document.querySelector('.resume-wrapper').style.background = gradient;
+      document.querySelector('.header').style.background = gradient;
+      document.querySelector('.footer').style.background = gradient;
+
+      document.querySelectorAll('.card').forEach(card => {
+        card.style.background = cardBg;
+      });
+
+      document.querySelectorAll('.item-title, .skill-category-title').forEach(el => {
+        el.style.color = textPrimary;
+      });
+
+      document.querySelectorAll('.summary-text, .item-description, .item-subtitle').forEach(el => {
+        el.style.color = textSecondary;
+      });
+
+      const sectionTitles = document.querySelectorAll('.section-title');
+      sectionTitles.forEach(title => {
+        title.style.background = gradient;
+        title.style.webkitBackgroundClip = 'text';
+        title.style.webkitTextFillColor = 'transparent';
+        title.style.backgroundClip = 'text';
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.gradient_start || defaultConfig.gradient_start,
+            set: (value) => {
+              config.gradient_start = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ gradient_start: value });
+              }
+            }
+          },
+          {
+            get: () => config.gradient_end || defaultConfig.gradient_end,
+            set: (value) => {
+              config.gradient_end = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ gradient_end: value });
+              }
+            }
+          },
+          {
+            get: () => config.card_background || defaultConfig.card_background,
+            set: (value) => {
+              config.card_background = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ card_background: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_primary || defaultConfig.text_primary,
+            set: (value) => {
+              config.text_primary = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ text_primary: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_secondary || defaultConfig.text_secondary,
+            set: (value) => {
+              config.text_secondary = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ text_secondary: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["full_name", config.full_name || defaultConfig.full_name],
+        ["job_title", config.job_title || defaultConfig.job_title],
+        ["email", config.email || defaultConfig.email],
+        ["github_url", config.github_url || defaultConfig.github_url],
+        ["linkedin_url", config.linkedin_url || defaultConfig.linkedin_url],
+        ["professional_summary", config.professional_summary || defaultConfig.professional_summary]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b2ef80d656dba26',t:'MTc2NjU2NzQ2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
